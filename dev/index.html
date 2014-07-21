@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="viewer">
   <head>
-    <script src="libs/angular-1.3.0-beta.15/angular.js"></script>
-    <script src="js/app.js"></script>
   </head>
 
   <body>
-    <div id="app"></div>
+    <div ng-controller="imageBlock as ib">
+      <h3>{{ib.block.title}}</h3>
+      <img src="{{ib.block.source}}"/>
+      <div><p>{{ib.block.description}}</p></div>
+      <ul ng-repeat="comment in ib.block.comments">
+	<li>
+	  <blockquote>{{comment.body}}</blockquote>
+	  <div>- {{comment.author}}</div>
+	</li>
+      </ul>
+    </div>
+    <div ng-controller="thumbnailBlock as tb">
+      <div ng-repeat="thumb in tb.list.thumbs">
+	<img src="{{thumb.source}}" height="50" width="50" ng-click="tb.thumbSelect()"/>
+      </div>
+    </div>
+    <script src="libs/angular-1.3.0-beta.15/angular.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
