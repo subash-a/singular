@@ -1,0 +1,16 @@
+      <div>		  
+	<h3>{{gallery.currentImage.title}}</h3>			     
+	<img src="{{gallery.currentImage.source}}"/> 			  
+	<div><p>{{gallery.currentImage.description}}</p></div>	     
+	<ul ng-repeat="comment in gallery.currentImage.comments">       
+	  <li>								  
+	    <blockquote>{{comment.body}}</blockquote>			  
+	    <div>- {{comment.author}}</div>				  
+	  </li>								  
+	</ul>								  
+	<div class="row">
+	  <div class="col-md-1" ng-repeat="thumb in gallery.images" ng-click="gallery.changeImage(thumb)" >		   
+	    <img ng-src="{{thumb.thumbnail.source}}" height="50" width="50"/>
+	  </div>
+	</div>
+      </div>

@@ -1,6 +1,0 @@
-(function () {
-    var app = angular.module("viewer",[]);
-    app.controller("imageBlock", function () {
-	this.imageText = "Hello World";
-    });
-} ());
