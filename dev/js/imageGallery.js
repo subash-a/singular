@@ -24,7 +24,6 @@
 	"description": "The coolest Eyes in the world!",
 	"comments": [{"body": "Superlike!!!","author":"superBall"}]
     }];
-
     var app = angular.module("ImageGalleryModule", []);
     app.directive ("imageGallery", function () {
 	return {
