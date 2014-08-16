@@ -1,0 +1,93 @@
+<div id="album-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Header content for the modal -->
+      <div class="modal-header">
+	<button class="close" type="button" data-dismiss="modal">
+	  <span>&times;</span>
+	</button>
+	<h4 class="modal-title">New Photo Album</h4>
+      </div>
+
+      <!-- Body content for the modal with form section -->
+      <div class="modal-body">
+	<form class="container-fluid">
+	  <div class="row">
+	    <div class="col-md-6 pull-right">
+
+	      <!-- Cover photo form control group -->
+	      <div class="control-group">
+		<label for="album-cover-photo">
+		  Album Cover Photo 
+		</label>
+		<div class="controls">
+		  <img name="album-cover-photo" id="img-album-cover" 
+		       src="assets/images/profile-placeholder.png"
+		       height="250px" width="250px" class="img-rounded"/>
+		</div>
+	      </div>
+	    </div>
+	    <div class="col-md-6">
+
+	      <!-- Album Name form control group -->
+	      <div class="control-group">
+		<label for="album-name">Album Name: </label>
+		<div class="controls">
+		  <input name="album-name" id="txt-album-name" 
+			 placeholder="My Photo Album" required="true"
+			 ng-model="album.name"/>
+		</div>
+	      </div>
+
+	      <!-- Album Description form control group -->
+	      <div class="control-group">
+		<label for="album-description"> 
+		  Album Description: 
+		</label>
+		<div class="controls">
+		  <textarea name="album-description"id="txt-album-desc" 
+			    placeholder="My Photo Album" 
+			    ng-model="album.description">
+		  </textarea>
+		</div>
+	      </div>
+
+	      <!-- Album Start Date form control group -->
+	      <div class="control-group">
+		<label for="album-start-date"> 
+		  Album Start Date: 
+		</label>
+		<div class="controls">
+		  <input name="album-start-date" id="txt-album-start-date"
+			 type="text" ng-model="album.startDate"/>
+		</div>
+	      </div>
+
+	      <!-- Album End Date form control group -->
+	      <div class="control-group">
+		<label for="album-end-date"> 
+		  Album End Date: 
+		</label>
+		<div class="controls">
+		  <input name="album-end-date" id="txt-album-end-date"
+			 type="text" ng-model="album.endDate"/> 
+		</div>
+	      </div>
+	    </div>
+	  </div>
+        </form>
+      </div>
+
+      <!-- Footer section for Modal with buttons -->
+      <div class="modal-footer">
+	<button class="btn btn-default" type="button" 
+		data-dismiss="modal"> Cancel </button> 
+	<button ng-click="albumForm.createNewAlbum(album)" class="btn btn-primary" type="button">
+	  Create Album 
+	</button> 
+      </div>
+    </div>
+  </div>
+</div>
+
