@@ -1,6 +1,7 @@
 (function () {
     var app = angular.module("PhotoBook", [
 	"ImageGalleryModule",
-	"NewAlbumForm"]);
+	"NewAlbumForm",
+	"Albums"]);
     
 } ());
