@@ -7,7 +7,7 @@
 	    "cover":"assets/images/everest.jpg",
 	    "startDate":"2014-03-03",
 	    "endDate":"2014-05-03",
-	    "location":"Bandhavgarh"
+	    "location":"Mt. K2, Pakistan"
 	},
 	{
 	    "title":"Amazon",
@@ -23,7 +23,7 @@
 	    "cover":"assets/images/books.png",
 	    "startDate":"2014-03-03",
 	    "endDate":"2014-05-03",
-	    "location":"Bandhavgarh"
+	    "location":"Crossword, Indiranagar"
 	},
 	{
 	    "title":"Tea Cup",
@@ -31,7 +31,7 @@
 	    "cover":"assets/images/tea.jpg",
 	    "startDate":"2014-03-03",
 	    "endDate":"2014-05-03",
-	    "location":"Bandhavgarh"
+	    "location":"Infinitea, Indiranagar"
 	}
     ];
     app.controller("AlbumController", function () {
