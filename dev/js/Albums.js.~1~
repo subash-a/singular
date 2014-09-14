@@ -1,0 +1,7 @@
+(function () {
+    var app = angular.module("Albums",[]);
+    var albums = [];
+    app.controller("albumController", function () {
+	this.albums = albums;
+    });
+} ())

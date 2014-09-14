@@ -25,17 +25,18 @@
 	"comments": [{"body": "Superlike!!!","author":"superBall"}]
     }];
     var app = angular.module("ImageGalleryModule", []);
-    app.directive ("imageGallery", function () {
-	return {
-	    "restrict": "E",
-	    "templateUrl": "js/imageGallery.html",
-	    "controller": function () {
+    app.controller("ImageGalleryController",["$scope",function ($scope) {
 		this.images = images;
 		this.currentImage = images[0];
 		this.changeImage = function (image) {
 		    this.currentImage = image;
-		};
-	    },
+		}
+	}]);
+    app.directive ("imageGallery", function () {
+	return {
+	    "restrict": "E",
+	    "templateUrl": "../templates/image-gallery.html",
+	    "controller": "ImageGalleryController",
 	    "controllerAs": "gallery"
 	}
     });  

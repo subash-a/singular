@@ -1,0 +1,11 @@
+    <ul id="album-container" class="row nav" ng-controller="AlbumController as ac">
+	<li class="col-xs-4 col-md-3" ng-repeat="album in ac.albums">
+	  <img ng-src="{{album.cover}}" width="100%" height="200px"/>
+	  <p style="text-align:center;">
+	    <h4><strong>{{album.title}}</strong></h4>
+	  </p>
+	  <p><span class="glyphicon glyphicon-map-marker"></span> {{album.location}}</p>
+	  <p><span class="glyphicon glyphicon-calendar"></span> {{album.startDate}} to {{album.endDate}}</p>
+	  <p style="text-align:justify;">{{album.description}}</p>
+	</li>
+    </ul>

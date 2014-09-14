@@ -3,7 +3,7 @@
     app.directive("newAlbumForm", function () {
 	return {
 	    "restrict": "E",
-	    "templateUrl": "js/newAlbumForm.html",
+	    "templateUrl": "../templates//new-album-form.html",
 	    "controller": function () {
 		this.createNewAlbum = function(album) {
 		    this.albumName = album.name;

@@ -7,38 +7,11 @@
 
   <body class="container">
     <div class="row" style="height:60px"><h2>Narrator</h2></div>
-    <div class="row" style="height:60px;">
-      <button id="btn-album-create" data-target="#album-modal" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New Album</button>
-    </div>
-    <div id="modal-container" class="row">
-      <new-album-form></new-album-form>
-    </div>
-    <!-- 
-	 Album Section displays all albums currently in the account
-      -->
-    <ul id="album-container" class="row nav" ng-controller="AlbumController as ac">
-	<li class="col-xs-4 col-md-3" ng-repeat="album in ac.albums">
-	  <img ng-src="{{album.cover}}" width="100%" height="200px"/>
-	  <p style="text-align:center;">
-	    <h4><strong>{{album.title}}</strong></h4>
-	  </p>
-	  <p><span class="glyphicon glyphicon-map-marker"></span> {{album.location}}</p>
-	  <p><span class="glyphicon glyphicon-calendar"></span> {{album.startDate}} to {{album.endDate}}</p>
-	  <p style="text-align:justify;">{{album.description}}</p>
-	</li>
-<!--	<li class="col-xs-4 col-md-3"><img src="assets/images/books.png" width="100%" height="200px" /><p style="text-align:center;"><strong>This is an album section</strong></p><p>Lorem ipusm dolor sit amet</p></li>
-	<li class="col-xs-4 col-md-3"><img src="assets/images/greenery.jpeg" width="100%" height="200px" /><p style="text-align:center;"><strong>This is an album section</strong></p><p>Lorem ipusm dolor sit amet</p></li>
-	<li class="col-xs-4 col-md-3"><img src="assets/images/tea.jpg" width="100%" height="200px" /><p style="text-align:center;"><strong>This is an album section</strong></p><p>Lorem ipusm dolor sit amet</p></li>-->
-    </ul>
-    <!--
-	End of the album display section
-      -->
-    <div id="gallery-container" class="row">
-      <image-gallery></image-gallery>
-    </div>
+    <div ng-view></div>
     <script src="libs/jquery-1.11.1.js"></script>
     <script src="libs/bootstrap.js"></script>
-    <script src="libs/angular-1.3.0-beta.15/angular.js"></script>
+    <script src="libs/angular-1.3.0-beta.15/angular.js"></script>  
+    <script src="libs/angular-1.3.0-beta.15/angular-route.js"></script>
     <script src="js/app.js"></script>
     <script src="js/imageGallery.js"></script>
     <script src="js/newAlbumForm.js"></script>

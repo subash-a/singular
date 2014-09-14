@@ -1,0 +1,4 @@
+.thumbnail-60 {
+    height: auto;
+    width: 20%;
+}
