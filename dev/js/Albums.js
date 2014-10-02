@@ -34,13 +34,13 @@
 	    "location":"Infinitea, Indiranagar"
 	}
     ];
-    app.controller("AlbumController", function () {
+    app.controller("AlbumController",["$scope", function ($scope) {
 	this.albums = albums;
-    });
+    }]);
     app.directive("albums", function () {
 	return {
 	    "restrict": "E",
-	    "templateUrl": "../templates/albums.html"
+	    "templateUrl": "../templates/albums.html"	    
 	};
     });
 } ())
